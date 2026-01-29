@@ -12,29 +12,30 @@
 <body>
     <!-- =================HEADER ================= -->
     <header>
-            <div class="menu">
-                <div>
+                <div class="menu">
                     <h1 class="header_title">Osondu Gabriel</h1>
                     <div class="title2_box">
                         <h1 class="header_title2">Osondu</h1>
-                        <h1 class="header_title2">  Gabriel</h1>
+                        <h1 class="header_title2"> Gabriel</h1>
                     </div>
                 </div>
-                <div>
-                    <label for="toggler"><i class="fa fa-bars"></i></label>
-                    <label for="close"><i class="fa fa-close"></i></label>
-                </div>
-            </div>
-            <input type="checkbox" name="" id="toggler">
-        <nav>
-            <ul class="nav_list">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skill">Skills</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#education">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+                 <!-- checkbox toggle -->
+                <input type="checkbox" name="" id="menu_toggler" class="toggler">
+                <!-- hamburger/close icon -->
+                    <label for="menu_toggler" class="menu_icon">
+                        <i class="fa fa-bars open"></i>
+                        <i class="fa fa-times close"></i>
+                    </label>
+                <nav>
+                    <!-- menu -->
+                    <ul class="nav_list">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skill">Skills</a></li>
+                        <li><a href="#project">Projects</a></li>
+                        <li><a href="#education">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                 </nav>
     </header>
     <main>
         <div class="header_icon">
@@ -50,7 +51,7 @@
         </div>
         <!-- ================= ABOUT ME ================= -->
         <section id="about">
-            <h2>About me</h2>
+            <h2><span class="underline">About me</span></h2>
             <details>
                 <summary aria-expanded="false" role="button">Toggle to know about </summary>
                 <p><span><font size="7">H</font></span>ello world! I'm a passionate <strong><em>Frontend</em></strong> developer with Knowledge in HTML, CSS and JavaScript. I love creating clean, semantic and accessible websites and also learning about new technologies. I'm currently learning and improving my skills at the <strong>TECH POWA Frontend development program</strong> with my tutor <strong>Mr Adepate Enoch</strong>. Stay tuned for more...😊</p>
@@ -59,7 +60,7 @@
         
         <!-- ================= TECHNICAL SKILLS ================= -->
         <section id="skill">
-            <h2>Skills</h2>
+            <h2><span class="underline">Skills</span></h2>
             <details>
                 <summary aria-expanded="false" role="button">Toggle to view skills</summary>
                 <article>
@@ -104,65 +105,67 @@
             
             <!-- ================= PROJECTS ================= -->
          <section id="project">
-            <h2>Projects</h2>
+            <h2><span class="underline">Projects</span></h2>
             <details>
                 <summary>Toggle to view projects</summary>
-                <article class="project">
-                    <h3>Personal Portfolio (This site)</h3>
-                    <p>A simple yet effective protfolio website built entirely with HTML to showcase skills and projects</p>
-                    <ul>
-                        <li>Pure HTML structure</li>
-                        <li>Navigation with anchor links</li>
-                        <li>Accessible form and content</li>
-                    </ul>
-                    <button class="btn_project"><a href="#" class="project_link">This Site</a></button>
-                    <button class="btn_project"><a href="https://github.com/OsonduGabriel" class="project_link" target="_blank">Github</a></button>
-                </article>
-                <article class="project">
-                    <h3>Login Form</h3>
-                    <p>Designed a styled login form for users</p>
-                    <ul>
-                        <li>HTML form elements</li>
-                        <li>CSS styling and layouts</li>
-                    </ul>
-                    <button class="btn_project"><a href="https://gabriel-login-form.netlify.app/" class="project_link" target="_blank">View Demo</a></button>
-                    <button class="btn_project"><a href="https://github.com/OsonduGabriel" class="project_link" target="_blank">Github</a></button>
-                </article>
-                <article class="project">
-                    <h3>Hometown homepage site</h3>
-                    <p>Designed a website for my hometown for tourist</p>
-                    <ul>
-                        <li>HTML and CSS</li>
-                    </ul>
-                    <button class="btn_project"><a href="https://gabriel-hometwown.netlify.app/" class="project_link" target="_blank">View Demo</a></button>
-                    <button class="btn_project"><a href="https://github.com/OsonduGabriel" class="project_link" target="_blank">Github</a></button>
-                </article>
-                <article class="project">
-                    <h3>Lead Tracker extension</h3>
-                    <p>Designed a lead tracker extension to track leads in a site</p>
-                    <ul>
-                        <li>HTML and CSS</li>
-                        <li>JavaScript arrays and DOM manipulation</li>
-                    </ul>
-                    <button class="btn_project"><a href="https://gabriel-leadtracker-extension.netlify.app/" class="project_link" target="_blank">View Demo</a></button>
-                    <button class="btn_project"><a href="https://github.com/OsonduGabriel" class="project_link" target="_blank">Github</a></button>
-                </article>
-                <article class="project">
-                    <h3>Blog site</h3>
-                    <p>Blog website about life style</p>
-                    <ul>
-                        <li>HTML and CSS flexbox</li>
-                        <li>Responsive design</li>
-                    </ul>
-                    <button class="btn_project"><a href="https://osondu-blog-exercise.netlify.app/" class="project_link" target="_blank">View Demo</a></button>
-                    <button class="btn_project"><a href="https://github.com/OsonduGabriel" class="project_link" target="_blank">Github</a></button>
-                </article>
+                <div class="project_box">
+                    <article class="project">
+                        <h3>Personal Portfolio (This site)</h3>
+                        <p>A simple yet effective protfolio website built entirely with HTML to showcase skills and projects</p>
+                        <ul>
+                            <li>Pure HTML structure</li>
+                            <li>Navigation with anchor links</li>
+                            <li>Accessible form and content</li>
+                        </ul>
+                        <button class="btn_project"><a href="#" class="project_link">This Site</a></button>
+                        <button class="btn_project"><a href="https://github.com/OsonduGabriel" class="project_link" target="_blank">Github</a></button>
+                    </article>
+                    <article class="project">
+                        <h3>Login Form</h3>
+                        <p>Designed a styled login form for users</p>
+                        <ul>
+                            <li>HTML form elements</li>
+                            <li>CSS styling and layouts</li>
+                        </ul>
+                        <button class="btn_project"><a href="https://gabriel-login-form.netlify.app/" class="project_link" target="_blank">View Demo</a></button>
+                        <button class="btn_project"><a href="https://github.com/OsonduGabriel" class="project_link" target="_blank">Github</a></button>
+                    </article>
+                    <article class="project">
+                        <h3>Hometown homepage site</h3>
+                        <p>Designed a website for my hometown for tourist</p>
+                        <ul>
+                            <li>HTML and CSS</li>
+                        </ul>
+                        <button class="btn_project"><a href="https://gabriel-hometwown.netlify.app/" class="project_link" target="_blank">View Demo</a></button>
+                        <button class="btn_project"><a href="https://github.com/OsonduGabriel" class="project_link" target="_blank">Github</a></button>
+                    </article>
+                    <article class="project">
+                        <h3>Lead Tracker extension</h3>
+                        <p>Designed a lead tracker extension to track leads in a site</p>
+                        <ul>
+                            <li>HTML and CSS</li>
+                            <li>JavaScript arrays and DOM manipulation</li>
+                        </ul>
+                        <button class="btn_project"><a href="https://gabriel-leadtracker-extension.netlify.app/" class="project_link" target="_blank">View Demo</a></button>
+                        <button class="btn_project"><a href="https://github.com/OsonduGabriel" class="project_link" target="_blank">Github</a></button>
+                    </article>
+                    <article class="project">
+                        <h3>Blog site</h3>
+                        <p>Blog website about life style</p>
+                        <ul>
+                            <li>HTML and CSS flexbox</li>
+                            <li>Responsive design</li>
+                        </ul>
+                        <button class="btn_project"><a href="https://osondu-blog-exercise.netlify.app/" class="project_link" target="_blank">View Demo</a></button>
+                        <button class="btn_project"><a href="https://github.com/OsonduGabriel" class="project_link" target="_blank">Github</a></button>
+                    </article>
+                </div>
             </details>
         </section>
                 
                         <!-- ================= EDUCATION & EXPERIENCE ================= -->
         <section id="education">
-                    <h2>Education & Experience</h2>
+                    <h2><span class="underline">Education & Experience</span></h2>
                 <details>
                     <summary aria-expanded="false" role="button">Toggle to view education & experience</summary>
                     <div class="education">
@@ -216,9 +219,19 @@
     </main>
     <!-- ================= FOOTER ================= -->
     <footer>
-        <p>Github: <a href="https://github.com/OsonduGabriel">github/OsonduGabriel</a></p>
-        <p>&copy; 2026 Osondu Gabriel. All rights reserved.</p>  
-        <p><a href="#top">Back to top 🔺</a></p> 
+        <div class="footer_icon">
+            <a href="https://github.com/OsonduGabriel" target="_blank"><i class="fa-brands fa-github icon"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-facebook icon"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-x-twitter icon"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-youtube icon"></i></a>
+            <a href="" target="blank"><i class="fa-brands fa-linkedin icon"></i></a>
+        </div>
+        <div>
+            <p>&copy; 2026 Osondu Gabriel. All rights reserved.</p> 
+        </div> 
+        <div>
+            <p><a href="#top">Back to top 🔺</a></p> 
+        </div>
     </footer>
 </body>
 </html>

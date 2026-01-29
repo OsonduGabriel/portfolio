@@ -19,8 +19,8 @@ header{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
     background: linear-gradient(rgba(5, 24, 226, 0.849),rgba(5, 24, 226, 0.849));
     background-size: cover;
     background-position: center;
@@ -30,6 +30,7 @@ header{
     border-bottom: 0.5rem solid white;
     flex-wrap: wrap;
     position: relative;
+    box-sizing: border-box;
 }
 header::before{
     content: '';
@@ -75,31 +76,37 @@ header > *{
 .menu{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 15rem;
+    justify-content: start;
     position: relative;
 }
-.fa-bars, .fa-close{
+
+#menu_toggler{
+    display: none;
+}
+.menu_icon{
+    padding: 0.3rem;
     color: white;
     font-size: 1.5rem;
+    cursor: pointer;
+    top: -5rem;
+    left: 15rem;
 }
-.fa-close{
-    left: 14.5rem;
-    top: 5.5rem;
-    position: absolute;
+
+.menu_icon .close{
     display: none;
 }
-header label, #toggler{
-    display:inline;
-}
-#toggler:checked~nav{  
+
+/* show menu when checked */
+#menu_toggler:checked ~ nav{  
     max-height: 100%;
 }
-#toggler:checked~fa-close{
-    display: inline-flex;
-}
-#toggler:checked~fa-bars{
+
+/* switch icons */
+#menu_toggler:checked + .menu_icon .open{
     display: none;
+}
+#menu_toggler:checked + .menu_icon .close{
+    display: block;
 }
 
 
@@ -147,7 +154,7 @@ nav{
     overflow: hidden;
     border-radius: 2rem;
     padding: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     box-sizing: border-box;
 }
 .nav_list{
@@ -157,7 +164,7 @@ nav{
     flex-wrap: wrap;
     gap: 1rem;
     list-style: none;
-    margin-top: 1rem;
+    margin-top: 0.3rem;
 }
 nav li a{
     color: #fff;
@@ -246,6 +253,21 @@ main h2{
     margin-bottom: 0.5rem;
 }
 
+.underline{
+    position: relative;
+    display: inline-block;
+}
+.underline::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: -6px;
+    border-radius: 2px;
+    background: linear-gradient(to right,#2d28a3ce,#2b9dd5,#150ee5ce);
+}
+
 details{
     margin-top: 0.3rem;
     padding: 1rem;
@@ -329,6 +351,12 @@ details{
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.project_box{
+    display: flex;
+    flex-direction: column;
+}
+
 
 .project li{
     margin-left: 1rem;
@@ -420,19 +448,31 @@ details{
 }
 
 footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
     text-align: center;
     color: #ffffff;
     background: #150ee5ce;
     padding: 2rem;
     width: 100%;
 }
+.footer_icon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
 footer a{
     text-decoration: none;
-    color: #e3dfdf;
+    color: #fff;
 }
 footer a:hover{
-    text-decoration: underline;
-    font-size: large;
+    transform: scale(1.3);
+    color: #ffffffe3;
 }
 
 @media(min-width: 750px){
@@ -444,7 +484,11 @@ footer a:hover{
     align-items: center;
 }
 
-header label, #toggler{
+
+#menu_toggler{
+    display: none;
+}
+.menu_icon{
     display: none;
 }
 
@@ -524,6 +568,12 @@ li a:hover{
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1);
+}
+
+.project_box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
     
 }
